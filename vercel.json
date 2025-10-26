@@ -1,7 +1,7 @@
 {
   "version": 2,
   "framework": null,
-  "installCommand": "composer install --no-dev --prefer-dist && npm install",
+  "installCommand": "curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && composer install --no-dev --prefer-dist && npm install",
   "buildCommand": "vite build",
   "outputDirectory": "public",
 
