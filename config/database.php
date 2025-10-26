@@ -76,11 +76,6 @@ return [
             'prefix_indexes' => true,
             'search_path' => 'public',
             'sslmode' => env('DB_SSLMODE', 'prefer'),
-            'options' => [
-                PDO::ATTR_STRINGIFY_FETCHES => true,
-                PDO::ATTR_EMULATE_PREPARES => false,
-                'options' => 'endpoint=ep-wispy-cherry-a15f6oam&sslmode=require',
-            ],
         ],
 
         'sqlsrv' => [
