@@ -30,7 +30,7 @@
         "APP_KEY": "base64:bZfwNuRwgy5S3ZyvdJ+qvBsb+dX1Q+yFk7FqeYOjiMQ=",
         "DB_CONNECTION": "mysql",
         "DB_HOST": "127.0.0.1",
-        "DB_PORT": "3307",
+        "DB_PORT": "3306",
         "DB_DATABASE": "padi",
         "DB_USERNAME": "root",
         "DB_PASSWORD": "",
