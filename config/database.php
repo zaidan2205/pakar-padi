@@ -75,10 +75,11 @@ return [
             'prefix' => '',
             'prefix_indexes' => true,
             'search_path' => 'public',
-            'sslmode' => 'prefer',
+            'sslmode' => env('DB_SSLMODE', 'prefer'),
             'options' => [
-                'endpoint' => 'ep-wispy-cherry-a15f6oam', 
-                PDO::ATTR_PERSISTENT => true,
+                PDO::ATTR_STRINGIFY_FETCHES => true,
+                PDO::ATTR_EMULATE_PREPARES => false,
+                'options' => 'endpoint=ep-wispy-cherry-a15f6oam&sslmode=require',
             ],
         ],
 
