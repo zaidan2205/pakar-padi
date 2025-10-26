@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Diagnosa;
 use App\Models\Penyakit;
+use Carbon\Carbon;
 
 class DiagnosisController extends Controller
 {
@@ -20,7 +21,17 @@ class DiagnosisController extends Controller
         // Mengelompokkan hasil diagnosa berdasarkan tanggal dan waktu yang spesifik
         // Ini memastikan setiap tes yang berbeda akan menjadi grup terpisah
         $groupedDiagnosas = $riwayatdiagnosa->groupBy(function ($item) {
-            return $item->created_at->isoFormat('dddd, D MMMM YYYY | HH:mm');
+            $carbonDate = Carbon::parse($item->created_at);
+
+            // Trik untuk membulatkan menit ke kelipatan 3 terdekat
+            $roundedMinute = floor($carbonDate->minute / 3) * 3;
+
+            // Atur menit ke nilai yang sudah dibulatkan
+            $carbonDate->minute($roundedMinute);
+            $carbonDate->second(0);
+
+            // Gunakan format tahun-bulan-hari jam:menit sebagai kunci grouping
+            return $carbonDate->isoFormat('dddd, D MMMM YYYY | H:m');
         });
 
         // Kirim data yang sudah dikelompokkan ke view
