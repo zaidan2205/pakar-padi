@@ -22,6 +22,9 @@ class DatabaseSeeder extends Seeder
             'name' => 'Zaidan',
             'role' => 'umum',
             'email' => 'zaidan@gmail.com',
+            'alamat' => 'Jalan Karang Anyar No. 59 RT 05 RW 01 Sudagaran, Banyumas',
+            'kecamatan' => 'Banyumas',
+            'desa' => 'Sudagaran',
             'password' => bcrypt('banyumas')
         ]);
 

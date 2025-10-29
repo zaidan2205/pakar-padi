@@ -10,6 +10,7 @@ use App\Http\Controllers\DiagnosisController;
 use App\Http\Controllers\PertanyaanController;
 use App\Http\Controllers\RegistrasiController;
 use App\Http\Controllers\HamaPenyakitController;
+use App\Http\Controllers\LaporanDiagnosaTiapUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -83,7 +84,21 @@ Route::get('/kontak', [KontakController::class, 'show'])->name('daftar-kontak')-
 Route::post('/kontak', [KontakController::class, 'update'])->name('update.kontak');
 
 // Rute untuk menampilkan laporan
-Route::get('/laporan', [LaporanController::class, 'index'])->name('laporan')->middleware('admin');;
+Route::get('/laporan', [LaporanController::class, 'index'])->name('laporan')->middleware('admin');
 
+Route::get('/laporan_user', [LaporanController::class, 'index2'])->name('laporan_user')->middleware('admin');
+
+    
+    // 1. Laporan Utama (Rata-rata Penyakit Bulanan)
+    // Sekarang memanggil method index() dari LaporanController
+    Route::get('/laporan', [LaporanController::class, 'index'])->name('laporan'); 
+
+    // 2. Daftar User di Bulan tertentu (Drill-down Level 1)
+    // Sekarang memanggil method showUserList() dari LaporanController
+    Route::get('/laporan/{bulanTahun}/users', [LaporanController::class, 'showUsers'])->name('users-list'); 
+
+    // 3. Detail Diagnosa User (Drill-down Level 2)
+    // Sekarang memanggil method showUserDiagnosisDetail() dari LaporanController
+    Route::get('/laporan/diagnosa-detail/{user_id}', [LaporanController::class, 'showUserDiagnosisDetail'])->name('detail-diagnosa-user');
 
 

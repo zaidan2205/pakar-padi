@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\Rules;
 
 class RegistrasiController extends Controller
 {
@@ -16,8 +17,11 @@ class RegistrasiController extends Controller
     public function simpan(Request $request) {
         $validatedData = $request->validate([         //Mengisi var validatedData dengan isi var request (inputan user) namun dengan menambahkan validasi tertentu
             'name' => ['required', 'max:255'],     //syarat inputan nama
+            'alamat' => ['required', 'max:255'],     //syarat inputan alamat
             'email' => ['required', 'email:dns', 'unique:users'], //syarat inputan email
-            'password' => ['required', 'min:8'] //syarat inputan password
+            'password' => ['required', 'min:8', 'confirmed', Rules\Password::defaults()], //syarat inputan password, field 'password' HARUS SAMA DENGAN field 'password_confirmation'
+            'kecamatan' => ['required', 'string', 'max:100'],
+            'desa' => ['required', 'string', 'max:100'],
         ]);
 
         $validatedData['password'] = Hash::make($validatedData['password']);  //Data password di var validatedData akan dienkripsi

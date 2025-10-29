@@ -19,6 +19,9 @@ return new class extends Migration
             $table->String('role')->default('umum');
             $table->string('email')->unique();
             $table->string('password');
+            $table->string('kecamatan'); 
+            $table->string('desa'); 
+            $table->string('alamat');
             $table->timestamps();
         });
         // Masukkan data awal langsung di migrasi
@@ -27,6 +30,9 @@ return new class extends Migration
             'role' => 'admin', 
             'email' => 'admin@gmail.com',
             'password' => Hash::make('admin'),  //mengenkripsi user admin
+            'kecamatan' => 'Jatilawang',
+            'desa' => 'Tinggarjaya',
+            'alamat' => 'Kantor LPHP Kabupaten Banyumas',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
