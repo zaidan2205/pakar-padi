@@ -183,11 +183,35 @@
                     Laporan Rata-Rata
                 </a>
                 <ul class="dropdown-menu shadow-lg border-0 rounded-lg" aria-labelledby="rataRataDropdown">
-                    <li><a class="dropdown-item {{ request('kecamatan') == 1 && Request::is('laporan') ? 'active' : '' }}" href="/laporan?kecamatan=1">Kecamatan Ajibarang</a></li>
-                    <li><a class="dropdown-item {{ request('kecamatan') == 2 && Request::is('laporan') ? 'active' : '' }}" href="/laporan?kecamatan=2">Kecamatan 2</a></li>
-                    <li><a class="dropdown-item {{ request('kecamatan') == 3 && Request::is('laporan') ? 'active' : '' }}" href="/laporan?kecamatan=3">Kecamatan 3</a></li>
+                    <li><a class="dropdown-item {{ !request()->has('kecamatan') && Request::is('laporan') ? 'active' : '' }}" href="/laporan">Kabupaten Banyumas</a></li>
                     <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item {{ !request()->has('kecamatan') && Request::is('laporan') ? 'active' : '' }}" href="/laporan">Semua Kecamatan</a></li>
+                    <li><a class="dropdown-item {{ request('kecamatan') == 1 && Request::is('laporan') ? 'active' : '' }}" href="/laporan?kecamatan=1">Kecamatan Ajibarang</a></li>
+                    <li><a class="dropdown-item {{ request('kecamatan') == 2 && Request::is('laporan') ? 'active' : '' }}" href="/laporan?kecamatan=2">Kecamatan Banyumas</a></li>
+                    <li><a class="dropdown-item {{ request('kecamatan') == 3 && Request::is('laporan') ? 'active' : '' }}" href="/laporan?kecamatan=3">Kecamatan Baturaden</a></li>
+                    <li><a class="dropdown-item {{ request('kecamatan') == 4 && Request::is('laporan') ? 'active' : '' }}" href="/laporan?kecamatan=4">Kecamatan Cilongok</a></li>
+                    <li><a class="dropdown-item {{ request('kecamatan') == 5 && Request::is('laporan') ? 'active' : '' }}" href="/laporan?kecamatan=5">Kecamatan Gumelar</a></li>
+                    <li><a class="dropdown-item {{ request('kecamatan') == 6 && Request::is('laporan') ? 'active' : '' }}" href="/laporan?kecamatan=6">Kecamatan Jatilawang</a></li>
+                    <li><a class="dropdown-item {{ request('kecamatan') == 7 && Request::is('laporan') ? 'active' : '' }}" href="/laporan?kecamatan=7">Kecamatan Kalibagor</a></li>
+                    <li><a class="dropdown-item {{ request('kecamatan') == 8 && Request::is('laporan') ? 'active' : '' }}" href="/laporan?kecamatan=8">Kecamatan Karanglewas</a></li>
+                    <li><a class="dropdown-item {{ request('kecamatan') == 9 && Request::is('laporan') ? 'active' : '' }}" href="/laporan?kecamatan=9">Kecamatan Kebasen</a></li>
+                    <li><a class="dropdown-item {{ request('kecamatan') == 10 && Request::is('laporan') ? 'active' : '' }}" href="/laporan?kecamatan=10">Kecamatan Kedung Banteng</a></li>
+                    <li><a class="dropdown-item {{ request('kecamatan') == 11 && Request::is('laporan') ? 'active' : '' }}" href="/laporan?kecamatan=11">Kecamatan Kembaran</a></li>
+                    <li><a class="dropdown-item {{ request('kecamatan') == 12 && Request::is('laporan') ? 'active' : '' }}" href="/laporan?kecamatan=12">Kecamatan Kemranjen</a></li>
+                    <li><a class="dropdown-item {{ request('kecamatan') == 13 && Request::is('laporan') ? 'active' : '' }}" href="/laporan?kecamatan=13">Kecamatan Lumbir</a></li>
+                    <li><a class="dropdown-item {{ request('kecamatan') == 14 && Request::is('laporan') ? 'active' : '' }}" href="/laporan?kecamatan=14">Kecamatan Patikraja</a></li>
+                    <li><a class="dropdown-item {{ request('kecamatan') == 15 && Request::is('laporan') ? 'active' : '' }}" href="/laporan?kecamatan=15">Kecamatan Pekuncen</a></li>
+                    <li><a class="dropdown-item {{ request('kecamatan') == 16 && Request::is('laporan') ? 'active' : '' }}" href="/laporan?kecamatan=16">Kecamatan Purwojati</a></li>
+                    <li><a class="dropdown-item {{ request('kecamatan') == 17 && Request::is('laporan') ? 'active' : '' }}" href="/laporan?kecamatan=17">Kecamatan Purwokerto Barat</a></li>
+                    <li><a class="dropdown-item {{ request('kecamatan') == 18 && Request::is('laporan') ? 'active' : '' }}" href="/laporan?kecamatan=18">Kecamatan Purwokerto Selatan</a></li>
+                    <li><a class="dropdown-item {{ request('kecamatan') == 19 && Request::is('laporan') ? 'active' : '' }}" href="/laporan?kecamatan=19">Kecamatan Purwokerto Timur</a></li>
+                    <li><a class="dropdown-item {{ request('kecamatan') == 20 && Request::is('laporan') ? 'active' : '' }}" href="/laporan?kecamatan=20">Kecamatan Purwokerto Utara</a></li>
+                    <li><a class="dropdown-item {{ request('kecamatan') == 21 && Request::is('laporan') ? 'active' : '' }}" href="/laporan?kecamatan=21">Kecamatan Rawalo</a></li>
+                    <li><a class="dropdown-item {{ request('kecamatan') == 22 && Request::is('laporan') ? 'active' : '' }}" href="/laporan?kecamatan=22">Kecamatan Sokaraja</a></li>
+                    <li><a class="dropdown-item {{ request('kecamatan') == 23 && Request::is('laporan') ? 'active' : '' }}" href="/laporan?kecamatan=23">Kecamatan Somagede</a></li>
+                    <li><a class="dropdown-item {{ request('kecamatan') == 24 && Request::is('laporan') ? 'active' : '' }}" href="/laporan?kecamatan=24">Kecamatan Sumbang</a></li>
+                    <li><a class="dropdown-item {{ request('kecamatan') == 25 && Request::is('laporan') ? 'active' : '' }}" href="/laporan?kecamatan=25">Kecamatan Sumpiuh</a></li>
+                    <li><a class="dropdown-item {{ request('kecamatan') == 26 && Request::is('laporan') ? 'active' : '' }}" href="/laporan?kecamatan=26">Kecamatan Tambak</a></li>
+                    <li><a class="dropdown-item {{ request('kecamatan') == 27 && Request::is('laporan') ? 'active' : '' }}" href="/laporan?kecamatan=27">Kecamatan Wangon</a></li>
                 </ul>
             </li>
 

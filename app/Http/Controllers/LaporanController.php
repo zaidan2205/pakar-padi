@@ -24,9 +24,32 @@ class LaporanController extends Controller // Nama class diganti jadi LaporanCon
         $kecamatanOptions = [
             '1' => 'Ajibarang',
             '2' => 'Banyumas',
-            '3' => 'Kecamatan Abadi',
-            '4' => 'Kecamatan Tenteram',
-            // Pastikan ID dan Nama ini sesuai dengan data uji lo
+            '3' => 'Baturaden',
+            '4' => 'Cilongok',
+            '5' => 'Gumelar',
+            '6' => 'Jatilawang',
+            '7' => 'Kalibagor',
+            '8' => 'Karanglewas',
+            '9' => 'Kebasen',
+            '10' => 'Kedung Banteng',
+            '11' => 'Kembaran',
+            '12' => 'Kemranjen',
+            '13' => 'Lumbir',
+            '14' => 'Patikraja',
+            '15' => 'Pekuncen',
+            '16' => 'Purwojati',
+            '17' => 'Purwokerto Barat',
+            '18' => 'Purwokerto Selatan',
+            '19' => 'Purwokerto Timur',
+            '20' => 'Purwokerto Utara',
+            '21' => 'Rawalo',
+            '22' => 'Sokaraja',
+            '23' => 'Somagede',
+            '24' => 'Sumbang',
+            '25' => 'Sumpiuh',
+            '26' => 'Tambak',
+            '27' => 'Wangon',
+            // Pastikan ID dan Nama ini sesuai dengan data uji
         ];
 
         // --- 2. QUERY DATA DIAGNOSA DENGAN FILTER ---

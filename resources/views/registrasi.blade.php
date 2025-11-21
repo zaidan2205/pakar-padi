@@ -147,9 +147,32 @@
             // DATA LOKASI - Kamu bisa pindahkan ini ke API endpoint atau file terpisah nanti.
             const dataLokasi = {
                 "Ajibarang": ["Ajibarang Kulon", "Ajibarang Wetan", "Banjarsari", "Ciberung", "Darmakradenan", "Jingkang", "Kalibenda", "Karangbawang", "Kracak", "Lesmana", "Pancasan", "Pancurendang", "Pandansari", "Sawangan", "Tipar Kidul"],
-                "Banyumas": ["Desa 2x", "Desa 2y", "Desa 2z"],
-                "Kecamatan 3": ["Desa 3p", "Desa 3q", "Desa 3r", "Desa 3s"],
-                // Tambahkan data Kecamatan dan Desa lain di sini
+                "Banyumas": ["Binangun", "Danaraja", "Dawuhan", "Karangrau", "Kalisube", "Kedunggede", "Kedunguter", "Kejawar", "Papringan", "Pasinggangan", "Pekunden", "Sudagaran"],
+                "Baturaden": ["Karang Tengah", "Karangmangu", "Karangsalam Lor", "Kebumen", "Kemutug Kidul", "Kemutug Lor", "Ketenger", "Kutasari", "Pamijen", "Pandak", "Purwosari", "Rempoah"],
+                "Cilongok": ["Batuanten", "Cikidang", "Cilongok", "Cipete", "Gununglurah", "Jatisaba", "Kalisari", "Karanglo", "Karangtengah", "Kasegeran", "Langgongsari", "Pageraji", "Panembangan", "Panusupan", "Pejogol", "Pernasidi", "Rancamaya", "Sambirata", "Sokawera", "Sudimara"],
+                "Gumelar": ["Cihonje", "Cilangkap", "Gancang", "Gumelar", "Karangkemojing", "Kedungurang", "Paningkaban", "Samudra", "Samudra Kulon", "Tlaga"],
+                "Jatilawang": ["Adisara", "Bantar", "Gentasari", "Karanganyar", "Karangjati", "Karangtalun Kidul", "Karangtalun Lor", "Kedungwringin", "Margasana", "Tinggarjaya", "Tunjung"],
+                "Kalibagor": ["Kalibagor", "Kalicupak Kidul", "Kalicupak Lor", "Kaliori", "Kalisogra Wetan", "Karangdadap", "Pajerukan", "Pekaja", "Petir", "Srowot", "Suro", "Wlahar Wetan"],
+                "Karanglewas": ["Babakan", "Jipang", "Karanggude Kulon", "Karangkemiri", "Karanglewas Kidul", "Kediri", "Pangebatan", "Pasir Kulon", "Pasir Lor", "Pasir Wetan", "Singasari", "Sunyalangu", "Tamansari"],
+                "Kebasen": ["Adisana", "Bangsa", "Cindaga", "Gambarsari", "Kalisalak", "Kaliwedi", "Karangsari", "Kebasen", "Mandirancan", "Randegan", "Sawangan", "Tumiyang"],
+                "Kedung Banteng": ["Baseh", "Beji", "Dawuhan Kulon", "Dawuhan Wetan", "Kalikesur", "Kalisalak", "Karangnangka", "Karangsalam Kidul", "Kebocoran", "Kedung Banteng", "Keniten", "Kutaliman", "Melung", "Windujaya"],
+                "Kembaran": ["Bantarwuni", "Bojongsari", "Dukuhwaluh", "Karangsari", "Karangsoka", "Karangtengah", "Kembaran", "Kramat", "Ledug", "Linggasari", "Pliken", "Purbadana", "Purwodadi", "Sambeng Kulon", "Sambeng Wetan", "Tambaksari Kidul"],
+                "Kemranjen": ["Alasmalang", "Karangjati", "Karangmangu", "Karangrau", "Karangsalam", "Kebarongan", "Kedungpring", "Kemranjen", "Ketanda", "Nusamangir", "Petarangan", "Sibalung", "Sibrama", "Sidamulih", "Sirau"],
+                "Lumbir": ["Besuki", "Canduk", "Cidora", "Cingebul", "Cirahab", "Dermaji", "Kedunggede", "Lumbir", "Parungkamal", "Rawaheng"],
+                "Patikraja": ["Karanganyar", "Karangendep", "Kedungrandu", "Kedungwringin", "Kedungwuluh", "Mandirancan", "Notog", "Patikraja", "Pegalongan", "Sawangan", "Sidabowa", "Wlahar"],
+                "Pekuncen": ["Banjaranyar", "Candinegara", "Cibangkong", "Cikawung", "Cikembulan", "Glempang", "Karangkemiri", "Karangpundung", "Ketanda", "Krumput", "Pasir Wetan", "Pekuncen", "Petarangan", "Sokaraja", "Tlaga"],
+                "Purwojati": ["Jatilawang", "Karanganyar", "Karangjambu", "Karangpucung", "Karangsalam", "Karangtalun", "Karangtengah", "Kedungwringin", "Purwojati", "Wlahar"],
+                "Purwokerto Barat": ["Bantarsoka", "Karanglewas Lor", "Kedungbanteng", "Kedungwuluh", "Kober", "Pangebatan", "Pasir Kidul", "Pasir Kulon", "Pasir Wetan", "Pasirmuncang", "Rejasari"],
+                "Purwokerto Selatan": ["Berkoh", "Karanglesem", "Karangmanyar", "Karangpucung", "Karangsalam", "Kebocoran", "Karanglewas", "Pasir Wetan", "Purwokerto Kidul", "Purwokerto Kulon", "Tanjung", "Teluk"],
+                "Purwokerto Timur": ["Arcawinangun", "Kranji", "Mersi", "Purwokerto Lor", "Purwokerto Wetan", "Sokanegara"],
+                "Purwokerto Utara": ["Bancarkembar", "Bobosan", "Grendeng", "Karangbawang", "Karanggude", "Karangso", "Karangwangkal", "Pabuaran", "Purwanegara", "Sumampir"],
+                "Rawalo": ["Banjarparakan", "Banjarwangi", "Karangbawang", "Karangduren", "Karanglo", "Menganti", "Rawalo", "Sanggreman", "Sidamulih", "Tambaknegara", "Tipar"],
+                "Sokaraja": ["Banjaranyar", "Banjarsari Kidul", "Karangrau", "Karangsalam Kidul", "Karangso", "Karangturi", "Kedondong", "Klahang", "Pamijen", "Sokaraja Kidul", "Sokaraja Kulon", "Sokaraja Lor", "Sokaraja Tengah", "Sokaraja Wetan", "Wiradadi"],
+                "Somagede": ["Kanding", "Kedungwringin", "Klinting", "Piasa Kulon", "Piasa Wetan", "Plana", "Sokawera", "Somagede", "Tanggeran"],
+                "Sumbang": ["Banjarsari Kulon", "Banjarsari Wetan", "Banteran", "Ciberem", "Datar", "Gandatapa", "Karangcegak", "Karangmedi", "Karangnangka", "Kebanggan", "Kedunguter", "Kedungwringin", "Kemutug Lor", "Kotayasa", "Pegalongan", "Sumbang", "Susukan", "Tambaksogra", "Tambaksari"],
+                "Sumpiuh": ["Bogangin", "Karanggedang", "Karangpetir", "Kebokura", "Kedungwringin", "Ketanda", "Kradenan", "Nusadadi", "Pandak", "Selanegara", "Sumpiuh", "Tambak"],
+                "Tambak": ["Buniayu", "Gumelar Lor", "Karangbawang", "Karanglo", "Karangpetir", "Karangpucung", "Karangtengah", "Plangkapan", "Prembun", "Purwodadi", "Wlahar"],
+                "Wangon": ["Banteran", "Cikakak", "Jambu", "Jurangbahas", "Klapagading", "Klapagading Kulon", "Karanglo", "Lumbir", "Papringan", "Rawaheng", "Wangon", "Windujaya"],
             };
 
             const selectKecamatan = document.getElementById('kecamatan');
