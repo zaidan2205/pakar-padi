@@ -31,7 +31,7 @@ class DiagnosisController extends Controller
             $carbonDate->second(0);
 
             // Gunakan format tahun-bulan-hari jam:menit sebagai kunci grouping
-            return $carbonDate->isoFormat('dddd, D MMMM YYYY | H:m');
+            return $carbonDate->isoFormat('dddd, D MMMM YYYY | HH:mm');
         });
 
         // Kirim data yang sudah dikelompokkan ke view
