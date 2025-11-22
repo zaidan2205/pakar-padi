@@ -70,7 +70,7 @@
             <i class="bi bi-whatsapp"></i> 
             Chat Whatsapp
           </a>
-          <a href="tel:+{{ $kontak->no_whatsapp }}" class="btn btn-outline-success mt-4 mx-5"><i class="bi bi-telephone"></i> Telephone</a>
+          <a href="tel:+{{ $kontak->no_telephone }}" class="btn btn-outline-success mt-4 mx-5"><i class="bi bi-telephone"></i> Telephone</a>
           <a href="https://www.google.com/maps/search/?api=1&query=LPHP+Banyumas%2C+Banyumas" class="btn btn-outline-success mt-4"><i class="bi bi-geo-alt"></i></i> Alamat Kantor</a>
           <center>
         </div>
